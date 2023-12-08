@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-threaded Sort Demo</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff; /* Set text color to white */
+            text-align: center; /* Center text horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Center vertically */
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Specify font */
+        }
+    </style>
+</head>
+<body>
+    <img id="svgImage" src="static/charts/vertical-bar-chart.svg" alt="SVG Chart Image" />
+    <button onclick="generateAndLoadSvg()">Run Test</button>
+    <script>
+        async function generateAndLoadSvg() {
+            try {
+                // Make an AJAX request to the server
+                const response = await fetch('/generate_svg');
+                const result = await response.text();
+
+                if (response.ok) {
+                    // If successful, update the image source with a cache-busting query parameter
+                    const imageUrl = 'static/charts/vertical-bar-chart.svg?' + new Date().getTime();
+                    document.getElementById('svgImage').src = imageUrl;
+                } else {
+                    console.error('Error generating SVG:', result);
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+            }
+        }
+    </script>
+    <!-- Other body content -->
+</body>
+</html>
