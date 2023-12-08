@@ -1,46 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Multi-Threaded Sorting Info</title>
-        <style>
-            /* Set the background color to black */
-            body {
-                background-color: #000000;
-                color: #ffffff; /* Set text color to white */
-                text-align: center; /* Center text horizontally */
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100vh; /* Center vertically */
-                margin: 0; /* Remove default margin */
-                font-family: Arial, sans-serif; /* Specify font */
-            }
-            a {
-                color: #1A5432; /* Set link color to green (#00ff00) */
-                text-decoration: none; /* Remove underlines from links */
-            }
-            a:hover {
-                color: #ffffff; /* Change link color on hover to red (#ff0000) */
-            }
-            img {
-                max-width: 100%; /* Ensure the image doesn't exceed the viewport width */
-                height: 100px;
-            }
-        </style>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Threaded Sorting Info</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center; /* Center horizontally */
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10;
+            text-align: center;
+            height: 100vh; /* Cover the full viewport height */
+        }
+        main {
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 100px; /* Adjusted font size for better visibility */
+            margin: 200px 0; /* Add some margin around the main element */
+        }
+        a {
+            color: #1A5432;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        .demo-button-link {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding for the desired button size */
+            position: absolute; /* Position the button relative to the nearest positioned ancestor */
+            top: 490px; /* Set the distance from the top edge of the containing element or the page */
+            left: 560px; /* Set the distance from the left edge of the containing element or the page */
+            background-color: #1A5432; /* Button background color */
+            color: #ffffff; /* Button text color */
+            text-decoration: none; /* Remove underlines from the link */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to a pointer on hover */
+        }
+        /* Additional styles for when the button is hovered or focused */
+        .demo-button-link:hover {
+            background-color: #2E7D32; /* Change the background color on hover */
+        }
+        .background-info-button-link {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding for the desired button size */
+            position: absolute; /* Position the button relative to the nearest positioned ancestor */
+            top: 490px; /* Set the distance from the top edge of the containing element or the page */
+            left: 900px; /* Set the distance from the left edge of the containing element or the page */
+            background-color: #1A5432; /* Button background color */
+            color: #ffffff; /* Button text color */
+            text-decoration: none; /* Remove underlines from the link */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to a pointer on hover */
+        }
+        .background-info-button-link:hover {
+            background-color: #2E7D32; /* Change the background color on hover */
+        }
+        img {
+            max-width: 100%;
+            height: auto; /* Adjust height to be auto for maintaining aspect ratio */
+        }
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind other content */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <main>BR41N OV3RFLOW</main>
 
-        <img src="../static/brain_overflow.png" alt="Brain Overflow">
+    <div>
+        <a href="/multi_threaded_sort_demo" class="demo-button-link">Try Out The Demo</a>
+    </div>
 
-        
-        <a href="/multi_threaded_sort_demo">Try Out The Demo</a>
+    <div>
+        <a href="/background_info" class="background-info-button-link">Go to Background Info</a>
+    </div>
+    
+    <script>
+        // JavaScript code goes here
+        var s = window.screen;
+        var q = document.getElementById('canvas');
+        var width = q.width = s.width;
+        var height = q.height = s.height;
+        var letters = Array(256).join(1).split('');
 
-        <a href="/background_info">Go to Background Info</a>
+        var draw = function () {
+            q.getContext('2d').fillStyle = 'rgba(0,0,0,.05)';
+            q.getContext('2d').fillRect(0, 0, width, height);
+            q.getContext('2d').fillStyle = '#0F0';
+            letters.map(function (y_pos, index) {
+                text = String.fromCharCode(3e4 + Math.random() * 33);
+                x_pos = index * 10;
+                q.getContext('2d').fillText(text, x_pos, y_pos);
+                letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+            });
+        };
+        setInterval(draw, 33);
+    </script>
 
-    </body>
+</body>
 </html>
-
-

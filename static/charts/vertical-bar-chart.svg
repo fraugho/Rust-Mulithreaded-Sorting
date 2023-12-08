@@ -38,76 +38,64 @@ Sorting Algorithms
 0
 </text>
 </g>
-<g class="tick" transform="translate(0,399.07285)">
+<g class="tick" transform="translate(0,368)">
 <line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
 <text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-20
+1
 </text>
 </g>
-<g class="tick" transform="translate(0,338.1457)">
+<g class="tick" transform="translate(0,276)">
 <line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
 <text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-40
+2
 </text>
 </g>
-<g class="tick" transform="translate(0,277.21854)">
+<g class="tick" transform="translate(0,184)">
 <line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
 <text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-60
+3
 </text>
 </g>
-<g class="tick" transform="translate(0,216.2914)">
+<g class="tick" transform="translate(0,92)">
 <line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
 <text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-80
+4
 </text>
 </g>
-<g class="tick" transform="translate(0,155.36423)">
+<g class="tick" transform="translate(0,0)">
 <line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
 <text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-100
-</text>
-</g>
-<g class="tick" transform="translate(0,94.43707)">
-<line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
-<text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-120
-</text>
-</g>
-<g class="tick" transform="translate(0,33.50992)">
-<line shape-rendering="crispEdges" stroke="#bbbbbb" stroke-width="1px" x1="0" x2="-6" y1="0" y2="0"/>
-<text dy=".35em" fill="#777" font-family="sans-serif" font-size="12px" text-anchor="end" transform="rotate(0,-12,0)" x="-12" y="0">
-140
+5
 </text>
 </g>
 <text fill="#777" font-family="sans-serif" font-size="14px" text-anchor="middle" transform="rotate(-90)" x="-230" y="-42">
-In Milliseconds
+In Seconds
 </text>
 </g>
 <g class="g-view" transform="translate(60,90)">
 <g>
 <g class="bar" transform="translate(187.80489,0)">
-<rect fill="#1f77b4" height="51.788086" shape-rendering="crispEdges" width="153.65852" x="0" y="408.2119"/>
-<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="392.2119">
-17
-</text>
-</g>
-<g class="bar" transform="translate(358.5366,0)">
-<rect fill="#1f77b4" height="383.84106" shape-rendering="crispEdges" width="153.65852" x="0" y="76.158936"/>
-<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="60.158936">
-126
+<rect fill="#1f77b4" height="20.17627" shape-rendering="crispEdges" width="153.65852" x="0" y="439.82373"/>
+<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="423.82373">
+0.21930723
 </text>
 </g>
 <g class="bar" transform="translate(529.2683,0)">
-<rect fill="#1f77b4" height="67.01987" shape-rendering="crispEdges" width="153.65852" x="0" y="392.98013"/>
-<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="376.98013">
-22
+<rect fill="#1f77b4" height="29.797668" shape-rendering="crispEdges" width="153.65852" x="0" y="430.20233"/>
+<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="414.20233">
+0.32388768
+</text>
+</g>
+<g class="bar" transform="translate(358.5366,0)">
+<rect fill="#1f77b4" height="184.95099" shape-rendering="crispEdges" width="153.65852" x="0" y="275.049"/>
+<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="259.049">
+2.0103366
 </text>
 </g>
 <g class="bar" transform="translate(17.073181,0)">
-<rect fill="#1f77b4" height="283.31125" shape-rendering="crispEdges" width="153.65852" x="0" y="176.68875"/>
-<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="160.68875">
-93
+<rect fill="#1f77b4" height="438.79846" shape-rendering="crispEdges" width="153.65852" x="0" y="21.201538"/>
+<text dy=".35em" fill="#333" font-family="sans-serif" font-size="14px" text-anchor="middle" x="76.82926" y="5.201538">
+4.7695484
 </text>
 </g>
 </g>

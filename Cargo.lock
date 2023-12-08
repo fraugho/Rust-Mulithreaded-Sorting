@@ -1377,6 +1377,7 @@ dependencies = [
  "num_cpus",
  "piston_window",
  "rand",
+ "serde",
 ]
 
 [[package]]
