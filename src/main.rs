@@ -23,7 +23,7 @@ async fn index() -> HttpResponse {
 
 #[derive(Deserialize)]
 pub struct SvgQuery {
-    user_input: u32, // Use the appropriate type for your parameter
+    user_input: u64, // Use the appropriate type for your parameter
 }
 
 /// Generates an SVG and responds with a success message.
