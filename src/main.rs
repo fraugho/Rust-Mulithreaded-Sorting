@@ -5,10 +5,10 @@ use std::fs::read_to_string;
 use std::path::Path;
 use serde::Deserialize;
 
-// Local module import
+mod multi_threading;
+mod sorting;
 mod svg;
 
-/// Serves the main index page.
 #[get("/")]
 async fn index() -> HttpResponse {
     let html_path = Path::new("templates/index.html");
@@ -23,10 +23,9 @@ async fn index() -> HttpResponse {
 
 #[derive(Deserialize)]
 pub struct SvgQuery {
-    user_input: u64, // Use the appropriate type for your parameter
+    user_input: u64,
 }
 
-/// Generates an SVG and responds with a success message.
 #[get("/generate_svg")]
 async fn generate_svg (query: web::Query<SvgQuery>) -> impl Responder {
     let user_input = query.user_input;
@@ -39,7 +38,6 @@ async fn generate_svg (query: web::Query<SvgQuery>) -> impl Responder {
     }
 }
 
-/// Serves the multi-threaded sort demo page.
 #[get("/multi_threaded_sort_demo")]
 async fn multi_threaded_sort_demo() -> HttpResponse {
     let html_path = Path::new("templates/multi_threaded_sort_demo.html");
@@ -52,7 +50,6 @@ async fn multi_threaded_sort_demo() -> HttpResponse {
     }
 }
 
-/// Serves the background information page.
 #[get("/background_info")]
 async fn background_info() -> HttpResponse {
     let html_path = Path::new("templates/background_info.html");
@@ -65,36 +62,15 @@ async fn background_info() -> HttpResponse {
     }
 }
 
-/// A simple math calculation to demonstrate functionality.
-#[get("/math")]
-async fn mathematical() -> impl Responder {
-    HttpResponse::Ok().body(format!("1 + 1 = {}", 1 + 1))
-}
-
-/// Echoes the request body.
-#[post("/echo")]
-async fn echo(req_body: String) -> impl Responder {
-    HttpResponse::Ok().body(req_body)
-}
-
-/// Responds with a simple greeting.
-async fn manual_hello() -> impl Responder {
-    HttpResponse::Ok().body("Hey there!")
-}
-
-/// Main function to start the Actix web server.
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .service(index)
-            .service(mathematical)
-            .service(echo)
             .service(background_info)
             .service(multi_threaded_sort_demo)
             .service(generate_svg)
             .service(Files::new("/static", "static").show_files_listing())
-            .route("/hey", web::get().to(manual_hello))
     })
     .bind(("127.0.0.1", 8080))?
     .run()
